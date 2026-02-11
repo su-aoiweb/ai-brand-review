@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 // SCSS格納ディレクトリのパスを必要に応じて変更
-const baseDir = path.resolve(__dirname, "../../template_hp_static/sass");
+const baseDir = path.resolve(__dirname, "../../ai-brand-review/sass");
 const targetDirs = ["reset", "foundation", "layout", "parts", "module"];
 
 // _index に含めたくないファイル（ファイル名で指定）

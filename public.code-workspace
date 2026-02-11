@@ -4,7 +4,7 @@
       "path": ".",
     },
     {
-      "path": "./template_hp_static",
+      "path": "./ai-brand-review",
     },
     {
       "path": "./lint_tools",
@@ -17,6 +17,6 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": "explicit",
     },
-    "liveServer.settings.multiRootWorkspaceName": "template_hp_static",
+    "liveServer.settings.multiRootWorkspaceName": "ai-brand-review",
   },
 }

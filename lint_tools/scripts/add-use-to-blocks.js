@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const glob = require("glob");
 
-const targetPattern = "../template_hp_static/sass/page/**/block/_*.scss";
+const targetPattern = "../ai-brand-review/sass/page/**/block/_*.scss";
 const useStatement = '@use "../../../foundation/import" as *;';
 
 glob(targetPattern, (err, files) => {
