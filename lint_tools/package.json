@@ -1,0 +1,22 @@
+{
+  "name": "lint-tools",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "glob": "^7.2.3",
+    "husky": "^9.1.7",
+    "postcss-scss": "^4.0.6",
+    "stylelint": "^15.10.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.0.0"
+  },
+  "scripts": {
+    "prepare:scss": "npm run add:use && npm run generate:pages && npm run sass:index",
+    "add:use": "node scripts/add-use-to-blocks.js",
+    "generate:pages": "node scripts/generate-page-entry-scss.js",
+    "sass:index": "node scripts/generate-sass-index.js",
+    "lint:scss": "npm run prepare:scss && stylelint '../wp-content/themes/**/*.scss' --config .stylelintrc.json",
+    "lint:scss:fix": "npm run prepare:scss && stylelint '../wp-content/themes/**/*.scss' --config .stylelintrc.json --fix"
+  }
+}

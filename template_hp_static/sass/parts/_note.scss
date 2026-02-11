@@ -1,0 +1,13 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+note
+======================================================= */
+.u-note {
+  padding-left: 1em;
+  font-size: 0.75em;
+  text-indent: -1em;
+  &::before {
+    content: "※";
+  }
+}

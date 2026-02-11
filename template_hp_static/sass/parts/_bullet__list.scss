@@ -1,0 +1,12 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+u-bullet
+======================================================= */
+.u-bullet__item {
+  padding-left: 1em;
+  text-indent: -1em;
+  &::before {
+    content: "・";
+  }
+}

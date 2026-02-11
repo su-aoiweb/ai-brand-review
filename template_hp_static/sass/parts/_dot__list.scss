@@ -1,0 +1,19 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+u-dot
+======================================================= */
+.u-dot {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    &:not(:last-of-type) {
+      &::after {
+        content: "・";
+      }
+    }
+  }
+}

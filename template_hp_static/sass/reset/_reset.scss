@@ -1,0 +1,221 @@
+/* =======================================================
+reset.css
+======================================================= */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+}
+ol,
+ul {
+  list-style-type: "";
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+table {
+  border-spacing: 0;
+  border-collapse: separate;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-style: normal;
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  outline: none;
+  box-shadow: none;
+  line-break: strict;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+*,
+*:focus,
+a:focus {
+  outline: none;
+}
+p,
+li,
+dt,
+dd,
+th,
+td {
+  -ms-line-break: strict;
+  line-break: strict;
+  word-break: break-word;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition-timing-function: ease;
+  transition-duration: var(--transition-duration);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  image-rendering: optimize-contrast;
+}
+picture {
+  line-height: 0;
+}
+input,
+button,
+select,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px #fff inset;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+button,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+summary {
+  display: block;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+:where(dialog) {
+  width: unset;
+  max-width: unset;
+  height: unset;
+  max-height: unset;
+  padding: unset;
+  overflow: unset;
+  color: unset;
+  background-color: unset;
+  border: unset;
+}
+:root:has(:modal) {
+  overflow: hidden;
+}

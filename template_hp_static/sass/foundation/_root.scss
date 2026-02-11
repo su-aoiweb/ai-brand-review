@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "./import" as *;
+:root {
+  @each $name, $value in $color-list {
+    --color-#{$name}: #{$value};
+  }
+  @each $name, $value in $z-index-list {
+    --z-index-#{$name}: #{$value};
+  }
+
+  --transition-dulation: 0.5s;
+  --font-family-base: "Noto Sans JP", sans-serif;
+  --font-base-offset-top: 0.07em;
+  --inner-padding-inline: 40px;
+  --inner-max-width: 100%;
+  --font-size-base: 16px;
+  --font-weight-base: 400;
+  --letter-spacing-base: 0.04em;
+  --line-height-base: 1.5;
+  --viewport-width: 1104px; // mdのデザインカンプ幅
+  --breakpoint-sm: 767px; // smのブレイクポイント
+  --breakpoint-md: 768px; // mdのブレイクポイント
+  @include responsive(md) {
+    --inner-max-width: 1104px;
+  }
+  @include responsive(sm) {
+    --viewport-width: 375px; // smのデザインカンプ幅
+    --inner-padding-inline: 20px;
+  }
+}

@@ -1,0 +1,61 @@
+// 数値から値を取り除く
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// pxをremに変換
+@function rem($value, $base: 16px) {
+  @if type-of($value) == "number" and unit($value) == "px" {
+    @return (strip-unit($value) / strip-unit($base)) * 1rem;
+  }
+  @return unquote("calc(#{$value} / #{$base} * 1rem)");
+}
+
+// pxをvwに変換
+$vw-bases: (
+  "default": 1280,
+  "sm": 375,
+) !default;
+@function vw($px, $base-key: "default") {
+  @if unit($px) != "px" {
+    @warn 'vw()の引数にpx以外の値を指定しても計算できません';
+    @return $px;
+  }
+
+  $numerator: strip-unit($px);
+  $denominator: map-get($vw-bases, $base-key);
+  @return unquote("calc(#{$numerator} / #{$denominator} * 100vw)");
+}
+
+// 特定インナー幅について直接vw計算
+$rem-bases: (
+  "default": 1280,
+) !default;
+@function remvw($px, $base-key: "default") {
+  @if unit($px) != "px" {
+    @warn 'remvw()の引数にpx以外の値を指定しても計算できません';
+    @return $px;
+  }
+  @if not map-has-key($rem-bases, $base-key) {
+    @error "指定された基準 '#{$base-key}' は定義されていません。利用可能: #{map-keys($rem-bases)}";
+  }
+
+  $numerator: strip-unit($px);
+  $denominator: map-get($rem-bases, $base-key);
+
+  // 大画面用
+  $vw-large: calc(#{$numerator} / #{$denominator} * 100vw);
+
+  // sm 以下用
+  $vw-sp: calc(#{$numerator} / 375 * 100vw);
+  @if $numerator < 0 {
+    // 負の値：大きい方を採用（max）
+    @return unquote("max(#{$vw-large}, #{$vw-sp}, #{$px})");
+  } @else {
+    // 正の値：小さい方を採用（min）
+    @return unquote("min(#{$vw-large}, #{$vw-sp}, #{$px})");
+  }
+}

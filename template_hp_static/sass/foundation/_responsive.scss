@@ -1,0 +1,15 @@
+$breakpoints: (
+  "sm": "(width <= 767px)",
+  "md": "(width >= 768px)",
+  "lg": "(width <= 1440px)",
+  "xl": "(width >= 1441px)",
+) !default;
+@mixin responsive($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  } @else {
+    @error "指定されたブレークポイントは定義されていません。指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+  }
+}

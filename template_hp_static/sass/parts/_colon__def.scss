@@ -1,0 +1,17 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+colon
+======================================================= */
+.u-colon {
+  &__def {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  &__dttl {
+    display: flex;
+    &::after {
+      content: "：";
+    }
+  }
+}

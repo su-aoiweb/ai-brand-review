@@ -1,0 +1,15 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+u-only
+======================================================= */
+.u-md {
+  @include responsive(sm) {
+    display: none;
+  }
+}
+.u-sm {
+  @include responsive(md) {
+    display: none;
+  }
+}

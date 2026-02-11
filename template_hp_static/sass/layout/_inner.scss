@@ -1,0 +1,10 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+inner
+======================================================= */
+.l-inner {
+  max-width: rem(var(--inner-max-width));
+  padding-inline: rem(var(--inner-padding-inline));
+  margin-inline: auto;
+}

@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+    {
+      "path": "./template_hp_static",
+    },
+    {
+      "path": "./lint_tools",
+    },
+  ],
+  "settings": {
+    "stylelint.stylelintPath": "./lint_tools/node_modules/stylelint",
+    "stylelint.configFile": "./lint_tools/.stylelintrc.json",
+    "stylelint.validate": ["scss", "css", "postcss"],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit",
+    },
+    "liveServer.settings.multiRootWorkspaceName": "template_hp_static",
+  },
+}

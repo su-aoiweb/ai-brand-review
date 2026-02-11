@@ -1,0 +1,20 @@
+$color-list: (
+  brightest: #fff,
+  contrast: #f4f4f6,
+  base: #222,
+  main: #001482,
+  accent: #ff5d4a,
+  primary: #000,
+  secondary: #000,
+  link: #00f,
+  inactive: #ccc,
+);
+$z-index-list: (
+  loading: 9999,
+  loading-bg: 9998,
+  burger: 9100,
+  header: 9000,
+  on: 2,
+);
+$rem-root-size: 16px;
+$images-pass-root: "../images";

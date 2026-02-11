@@ -1,0 +1,69 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss", "stylelint-config-recess-order"],
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "declaration-block-no-redundant-longhand-properties": true,
+    "no-descending-specificity": null,
+    "selector-class-pattern": [
+      "^(--)?[a-z][a-z0-9-_]*$",
+      {
+        "message": "クラス名は小文字の英字で始まり、小文字、数字、ハイフン、アンダーバーのみを使用してください。（--modifierも許容）"
+      }
+    ],
+    "scss/dollar-variable-pattern": [
+      "^[a-z][a-z0-9\\-_]*$",
+      {
+        "message": "Sass変数は小文字の英字で始まり、小文字、数字、ハイフン、アンダースコアのみを使用してください。"
+      }
+    ],
+    "selector-id-pattern": [
+      "^[a-z][a-z0-9\\-_]*$",
+      {
+        "message": "ID名は小文字の英字で始まり、小文字、数字、ハイフン、アンダーバーのみを使用してください。"
+      }
+    ],
+    "keyframes-name-pattern": [
+      "^[a-z][a-z0-9\\-_]*$",
+      {
+        "message": "アニメーション名は小文字の英字で始まり、小文字、数字、ハイフン、アンダーバーのみを使用してください。"
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["field-sizing"]
+      }
+    ],
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": ["text-size-adjust", "box-orient", "line-clamp", "mask", "background-clip"]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": ["field-sizing"]
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": ["box"]
+      }
+    ],
+    "scss/at-function-pattern": null,
+    "rule-empty-line-before": "never",
+    "at-rule-empty-line-before": "never",
+    "block-no-empty": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "rules": {
+        "block-no-empty": null,
+        "declaration-property-value-no-unknown": null
+      }
+    }
+  ]
+}
