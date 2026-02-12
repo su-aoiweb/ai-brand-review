@@ -26,8 +26,55 @@
   <body>
     <div class="l-all__wrapper">
       <header class="l-header">
-        <div class="p-header__inner"></div>
-        <!-- /.p-header__inner -->
+        <div class="l-inner p-header">
+          <h1 class="p-header__logo">
+            <a href="./" class="p-header__logo-link">
+              <img src="./images/common/logo.svg" alt="AI Brand Review" width="282" height="24" />
+            </a>
+          </h1>
+
+          <nav class="p-header__gnav-wrapper u-md">
+            <ul class="p-header__gnav-list">
+              <li class="p-header__gnav-item"><a href="" class="p-header__gnav">こんなお悩みを解決</a></li>
+              <li class="p-header__gnav-item"><a href="" class="p-header__gnav">選ばれる理由</a></li>
+              <li class="p-header__gnav-item"><a href="" class="p-header__gnav">活用シーン</a></li>
+              <li class="p-header__gnav-item"><a href="https://share-na2.hsforms.com/1TKHVzP_EQlqV9L0eNdLxDQ4xxlb" target="_blank" class="p-header__gnav-btn">資料請求・トライアル</a></li>
+            </ul>
+          </nav>
+
+          <button type="button" aria-label="メニューを開く" commandfor="header-dialog" command="show-modal" class="p-header__burger u-sm">
+            <span class="p-header__burger-bar-wrapper">
+              <span class="p-header__burger-bar"></span>
+            </span>
+          </button>
+
+          <dialog id="header-dialog" closedby="any" class="p-header__dialog">
+            <div class="p-header__dialog-inner">
+              <div class="p-header__dialog-head">
+                <a href="./" class="p-header__logo-link">
+                  <img src="./images/common/logo.svg" alt="LOGO LABO" width="188" height="18" />
+                </a>
+                <button type="button" aria-label="メニューを閉じる" commandfor="header-dialog" command="close" class="p-header__burger">
+                  <span class="p-header__burger-bar-wrapper">
+                    <span class="p-header__burger-bar"></span>
+                  </span>
+                </button>
+              </div>
+              <!-- /.p-header__dialog-head -->
+              <div class="p-header__dialog-body">
+                <nav class="p-header__gnav-wrapper u-sm">
+                  <ul class="p-header__gnav-list">
+                    <li class="p-header__gnav-item"><a href="" class="p-header__gnav"></a></li>
+                  </ul>
+                </nav>
+                <a href="https://share-na2.hsforms.com/1TKHVzP_EQlqV9L0eNdLxDQ4xxlb" target="_blank" class="p-header__gnav-btn c-btn">資料請求はこちら</a>
+              </div>
+              <!-- /.p-header__dialog-body -->
+            </div>
+            <!-- /.p-header__dialog-inner -->
+          </dialog>
+        </div>
+        <!-- /.l-inner -->
       </header>
       <main class="l-main">
         <section class="p-mv">

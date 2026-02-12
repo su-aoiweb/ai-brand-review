@@ -16,12 +16,13 @@
   --font-size-base: 16px;
   --font-weight-base: 400;
   --letter-spacing-base: 0.04em;
-  --line-height-base: 1.5;
-  --viewport-width: 1104px; // mdのデザインカンプ幅
+  --line-height-base: calc(#{25 / 16});
+  --viewport-width: 1200px; // mdのデザインカンプ幅
   --breakpoint-sm: 767px; // smのブレイクポイント
   --breakpoint-md: 768px; // mdのブレイクポイント
+  --transition-duration: 0.5s;
   @include responsive(md) {
-    --inner-max-width: 1104px;
+    --inner-max-width: 1200px;
   }
   @include responsive(sm) {
     --viewport-width: 375px; // smのデザインカンプ幅
