@@ -15,8 +15,8 @@ header
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--white);
-  box-shadow: 0 rem(4px) rem(8px) rgb(0 61.88 93.27 / 6%);
+  background-color: var(--color-brightest);
+  box-shadow: 0 4px 8px rgb(0 61.88 93.27 / 6%);
   &.l-inner {
     width: calc(100vw - rem(80px));
     max-width: rem(1360px);

@@ -4,4 +4,78 @@
 mv
 ======================================================= */
 .p-mv {
+  padding: 184px 0 127px;
+  background: linear-gradient(145deg, #ffe7f0 0%, #ffecd7 100%);
+
+  // background-image: url("#{$images-pass-root}/top/mv-bg.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  .l-inner {
+    display: grid;
+    @include responsive(md) {
+      grid-template:
+        "ttl imgwrapper"
+        "txt imgwrapper"
+        "logo imgwrapper"
+        "btn imgwrapper";
+      grid-template-columns: 1fr 560px;
+      align-items: center;
+    }
+  }
+  &__ttl {
+    width: 532px;
+    margin-bottom: 40px;
+    @include responsive(md) {
+      grid-area: ttl;
+    }
+  }
+  &__txt {
+    margin-bottom: 32px;
+    @include responsive(md) {
+      grid-area: txt;
+    }
+  }
+  &__logo {
+    width: 430px;
+    margin-bottom: 56px;
+    @include responsive(md) {
+      grid-area: logo;
+    }
+  }
+  &__btn {
+    --_padding-block: 1em;
+
+    display: grid;
+    width: fit-content;
+    padding-block: calc(var(--_padding-block) - var(--font-base-offset-top)) calc(var(--_padding-block) + var(--font-base-offset-top));
+    padding-inline: 4em;
+    font-weight: 700;
+    color: var(--color-brightest);
+    background: linear-gradient(90deg, var(--color-main), var(--color-accent));
+    border-radius: calc(infinity * 1px);
+    @include responsive(md) {
+      grid-area: btn;
+    }
+
+    transition-property: translate box-shadow;
+    will-change: translate box-shadow;
+    &:focus-visible {
+      box-shadow: 0 rem(10px) rem(25px) rgb(222 19 63 / 30%);
+      translate: 0 -0.1rem;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 rem(10px) rem(25px) rgb(222 19 63 / 30%);
+        translate: 0 -0.1rem;
+      }
+    }
+  }
+  &__img {
+    &wrapper {
+      @include responsive(md) {
+        grid-area: imgwrapper;
+      }
+    }
+  }
 }

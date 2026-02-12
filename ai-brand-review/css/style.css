@@ -326,6 +326,7 @@ picture {
   --z-index-on: 2;
   --transition-dulation: 0.5s;
   --font-family-base: "Noto Sans JP", sans-serif;
+  --font-family-sub: "Josefin Sans", sans-serif;
   --font-base-offset-top: 0.07em;
   --inner-padding-inline: 40px;
   --inner-max-width: 100%;
@@ -369,8 +370,8 @@ header
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--white);
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 61.88, 93.27, 0.06);
+  background-color: var(--color-brightest);
+  box-shadow: 0 4px 8px rgba(0, 61.88, 93.27, 0.06);
 }
 .p-header.l-inner {
   width: calc(100vw - 5rem);
