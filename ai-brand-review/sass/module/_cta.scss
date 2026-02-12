@@ -1,0 +1,95 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+cta
+======================================================= */
+.c-cta {
+  padding-block: 5em;
+  background: linear-gradient(135deg, #de133f 0%, #ff9b2f 100%);
+  .l-inner {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: -80px;
+      left: -140px;
+      width: 860px;
+      height: 382px;
+      content: "";
+      background-image: url("#{$images-pass-root}/common/cta-bg.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+  &__box {
+    display: grid;
+    @include responsive(md) {
+      grid-template:
+        "imgwrapper ttl"
+        "imgwrapper txt"
+        "imgwrapper btn";
+      grid-template-rows: auto auto 1fr;
+      grid-template-columns: 1fr auto;
+      column-gap: 112px;
+      padding-right: calc(#{46 / 16} * 1em);
+    }
+    &-img {
+      &wrapper {
+        @include responsive(md) {
+          grid-area: imgwrapper;
+        }
+
+        justify-self: end;
+      }
+    }
+    &-ttl {
+      @include responsive(md) {
+        grid-area: ttl;
+      }
+
+      padding-top: calc(#{6 / 36} * 1em);
+      margin-bottom: calc(#{32 / 36} * 1em);
+      font-size: calc(#{36 / 16} * 1em);
+      font-weight: 700;
+      line-height: calc(#{57 / 36});
+      color: var(--color-brightest);
+    }
+    &-txt {
+      @include responsive(md) {
+        grid-area: txt;
+      }
+
+      margin-bottom: calc(#{32 / 16} * 1em);
+      color: var(--color-brightest);
+    }
+    &-btn {
+      @include responsive(md) {
+        grid-area: btn;
+      }
+
+      align-self: start;
+      width: fit-content;
+      min-width: 256px;
+      padding-block: calc(var(--_padding-block) - var(--font-base-offset-top)) calc(var(--_padding-block) + var(--font-base-offset-top));
+      padding-inline: 4em;
+      font-weight: 700;
+      color: var(--color-brightest);
+      text-align: center;
+      background-color: #111827;
+      border: 1px solid #111827;
+      border-radius: calc(infinity * 1px);
+
+      --_padding-block: 1em;
+      &:focus-visible {
+        color: #111827;
+        background-color: var(--color-brightest);
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: #111827;
+          background-color: var(--color-brightest);
+        }
+      }
+    }
+  }
+}
