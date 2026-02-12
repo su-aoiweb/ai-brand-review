@@ -89,6 +89,70 @@ mv
 }
 
 /* =======================================================
+reason
+======================================================= */
+.p-reason__read {
+  margin-bottom: calc(40/16 * 1em);
+  text-align: center;
+}
+.p-reason__list {
+  display: grid;
+  gap: calc(40/16 * 1em);
+}
+.p-reason__item {
+  display: grid;
+  overflow: hidden;
+  border-radius: 12px;
+}
+@media (width >= 768px) {
+  .p-reason__item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.p-reason__item:nth-of-type(odd) {
+  --item-color: var(--color-main);
+}
+.p-reason__item:nth-of-type(even) {
+  --item-color: var(--color-accent);
+}
+.p-reason__item-head {
+  display: grid;
+  align-items: center;
+  padding: calc(24/16 * 1em) calc(40/16 * 1em);
+  background-color: var(--color-contrast);
+  border-left: 6px solid var(--item-color);
+}
+.p-reason__item-head-inner {
+  display: grid;
+  gap: calc(24/16 * 1em);
+}
+.p-reason__item-hgroup-txt {
+  margin-bottom: 0.5em;
+  font-family: var(--font-family-sub);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--item-color);
+}
+.p-reason__item-hgroup-ttl {
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: calc(38/24);
+}
+.p-reason__item-txt {
+  font-size: calc(14/16 * 1em);
+}
+.p-reason__item-img {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.p-reason__item-imgwrapper {
+  display: grid;
+  place-content: center;
+  padding-block: 1.5em;
+  background-color: var(--item-color);
+}
+
+/* =======================================================
 solution
 ======================================================= */
 .p-solution__conts {

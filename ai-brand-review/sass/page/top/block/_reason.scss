@@ -1,0 +1,68 @@
+@use "../../../foundation/import" as *;
+
+/* =======================================================
+reason
+======================================================= */
+.p-reason {
+  &__read {
+    margin-bottom: calc(#{40 / 16} * 1em);
+    text-align: center;
+  }
+  &__list {
+    display: grid;
+    gap: calc(#{40 / 16} * 1em);
+  }
+  &__item {
+    display: grid;
+    overflow: hidden;
+    border-radius: 12px;
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &:nth-of-type(odd) {
+      --item-color: var(--color-main);
+    }
+    &:nth-of-type(even) {
+      --item-color: var(--color-accent);
+    }
+    &-head {
+      display: grid;
+      align-items: center;
+      padding: calc(#{24 / 16} * 1em) calc(#{40 / 16} * 1em);
+      background-color: var(--color-contrast);
+      border-left: 6px solid var(--item-color);
+      &-inner {
+        display: grid;
+        gap: calc(#{24 / 16} * 1em);
+      }
+    }
+    &-hgroup {
+      &-txt {
+        margin-bottom: 0.5em;
+        font-family: var(--font-family-sub);
+        font-weight: 700;
+        line-height: 1;
+        color: var(--item-color);
+      }
+      &-ttl {
+        font-size: 1.5em;
+        font-weight: 700;
+        line-height: calc(#{38 / 24});
+      }
+    }
+    &-txt {
+      font-size: calc(#{14 / 16} * 1em);
+    }
+    &-img {
+      &wrapper {
+        display: grid;
+        place-content: center;
+        padding-block: 1.5em;
+        background-color: var(--item-color);
+      }
+
+      overflow: hidden;
+      border-radius: 8px;
+    }
+  }
+}
