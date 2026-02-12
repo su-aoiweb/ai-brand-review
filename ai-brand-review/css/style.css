@@ -311,7 +311,7 @@ picture {
 
 :root {
   --color-brightest: #fff;
-  --color-contrast: #f4f4f6;
+  --color-contrast: #f7f7f7;
   --color-base: #1f1f1f;
   --color-main: #de133f;
   --color-accent: #ff9b2f;
@@ -887,4 +887,15 @@ form
   .wpcf7-form.invalid .wpcf7-not-valid-tip {
     font-size: 1.5rem;
   }
+}
+/* =======================================================
+ttl
+======================================================= */
+.c-ttl {
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: calc(40/36 * 1em);
+  font-size: calc(36/16 * 1em);
+  font-weight: 700;
+  line-height: calc(57/36);
 }

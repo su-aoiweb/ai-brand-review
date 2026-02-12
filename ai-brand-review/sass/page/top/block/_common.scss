@@ -3,3 +3,9 @@
 /* =======================================================
 common
 ======================================================= */
+section {
+  padding-block: calc(#{80 / 16} * 1em);
+  &:nth-of-type(even) {
+    background-color: var(--color-contrast);
+  }
+}
