@@ -4,10 +4,6 @@
 reason
 ======================================================= */
 .p-reason {
-  &__read {
-    margin-bottom: calc(#{40 / 16} * 1em);
-    text-align: center;
-  }
   &__list {
     display: grid;
     gap: calc(#{40 / 16} * 1em);
