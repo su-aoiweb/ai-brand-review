@@ -11,7 +11,7 @@ ttl
   font-weight: 700;
   line-height: calc(#{57 / 36});
   @include responsive(sm) {
-    margin-bottom: calc(#{24 / 16} * 1em);
+    margin-bottom: calc(#{24 / 28} * 1em);
     font-size: calc(#{28 / 16} * 1em);
     text-align: center;
   }

@@ -26,10 +26,19 @@ reason
       align-items: center;
       padding: calc(#{24 / 16} * 1em) calc(#{40 / 16} * 1em);
       background-color: var(--color-contrast);
-      border-left: 6px solid var(--item-color);
+      @include responsive(md) {
+        border-left: 6px solid var(--item-color);
+      }
+      @include responsive(sm) {
+        padding: calc(#{40 / 16} * 1em) 1em;
+        border-top: 6px solid var(--item-color);
+      }
       &-inner {
         display: grid;
         gap: calc(#{24 / 16} * 1em);
+        @include responsive(sm) {
+          gap: 1em;
+        }
       }
     }
     &-hgroup {
@@ -61,6 +70,9 @@ reason
       overflow: hidden;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+      @include responsive(sm) {
+        width: 283px;
+      }
     }
   }
 }
