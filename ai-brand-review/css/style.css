@@ -1136,3 +1136,10 @@ ttl
   font-weight: 700;
   line-height: calc(57/36);
 }
+@media (width <= 767px) {
+  .c-ttl {
+    margin-bottom: calc(24/16 * 1em);
+    font-size: calc(28/16 * 1em);
+    text-align: center;
+  }
+}

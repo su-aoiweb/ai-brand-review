@@ -4,6 +4,11 @@ common
 section {
   padding-block: calc(80/16 * 1em);
 }
+@media (width <= 767px) {
+  section {
+    padding-block: calc(56/16 * 1em);
+  }
+}
 section:nth-of-type(even) {
   background-color: var(--color-contrast);
 }
@@ -275,6 +280,7 @@ solution
   border-radius: 8px;
 }
 .p-solution__conts-imgwrapper {
+  justify-content: center;
   margin-bottom: 1em;
 }
 .p-solution__conts-hgroup {

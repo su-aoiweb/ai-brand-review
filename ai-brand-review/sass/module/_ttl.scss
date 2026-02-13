@@ -10,4 +10,9 @@ ttl
   font-size: calc(#{36 / 16} * 1em);
   font-weight: 700;
   line-height: calc(#{57 / 36});
+  @include responsive(sm) {
+    margin-bottom: calc(#{24 / 16} * 1em);
+    font-size: calc(#{28 / 16} * 1em);
+    text-align: center;
+  }
 }
