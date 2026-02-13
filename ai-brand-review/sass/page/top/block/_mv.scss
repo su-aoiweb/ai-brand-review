@@ -5,10 +5,10 @@ mv
 ======================================================= */
 .p-mv {
   position: relative;
-  padding: 184px 0 127px;
+  padding: rem(184px) 0 rem(127px);
   background: linear-gradient(145deg, #ffe7f0 0%, #ffecd7 100%);
   @include responsive(sm) {
-    padding: 107px 0 40px;
+    padding: rem(107px) 0 rem(40px);
     background: linear-gradient(315deg, rgb(255 231 240 / 80%) 0%, rgb(255 236 215 / 80%) 100%);
   }
   .l-inner {
@@ -21,7 +21,7 @@ mv
       "btn imgwrapper";
     align-items: center;
     @include responsive(md) {
-      grid-template-columns: 1fr 560px;
+      grid-template-columns: 1fr rem(560px);
     }
     @include responsive(sm) {
       grid-template:
@@ -30,26 +30,26 @@ mv
         "logo"
         "imgwrapper"
         "btn";
-      padding-inline: 21.5px;
+      padding-inline: rem(21.5px);
     }
     &::after {
       position: absolute;
-      width: 1144px;
-      height: 680px;
+      width: rem(1144px);
+      height: rem(680px);
       content: "";
       background-image: url("#{$images-pass-root}/top/mv-bg.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
       @include responsive(md) {
-        top: -184px;
-        right: -160px;
+        top: rem(-184px);
+        right: rem(-160px);
       }
       @include responsive(sm) {
-        bottom: -40px;
+        bottom: rem(-40px);
         left: 50%;
-        width: 375px;
-        height: 510px;
+        width: rem(375px);
+        height: rem(510px);
         background-image: url("#{$images-pass-root}/top/mv-bg-sm.svg");
         translate: -50%;
       }
@@ -59,20 +59,26 @@ mv
     position: relative;
     z-index: var(--z-index-on);
     grid-area: ttl;
-    width: 532px;
-    margin-bottom: 40px;
-    @include responsive(sm) {
-      width: 332px;
+    margin-bottom: rem(40px);
+    &-logo {
+      &-img {
+        &wrapper {
+          width: rem(532px);
+          @include responsive(sm) {
+            width: rem(332px);
+          }
+        }
+      }
     }
   }
   &__txt {
     position: relative;
     z-index: var(--z-index-on);
     grid-area: txt;
-    margin-bottom: 32px;
+    margin-bottom: rem(32px);
     @include responsive(sm) {
-      margin-bottom: 40px;
-      font-size: 14px;
+      margin-bottom: rem(40px);
+      font-size: rem(14px);
       letter-spacing: 0.03em;
     }
   }
@@ -80,8 +86,8 @@ mv
     position: relative;
     z-index: var(--z-index-on);
     grid-area: logo;
-    width: 430px;
-    margin-bottom: 56px;
+    width: rem(430px);
+    margin-bottom: rem(56px);
   }
   &__btn {
     --_padding-block: 1em;
@@ -96,7 +102,7 @@ mv
     font-weight: 700;
     color: var(--color-brightest);
     background: linear-gradient(90deg, var(--color-main), var(--color-accent));
-    border-radius: calc(infinity * 1px);
+    border-radius: calc(infinity * rem(1px));
     transition-property: translate box-shadow;
     will-change: translate box-shadow;
     @include responsive(sm) {
@@ -121,12 +127,12 @@ mv
       z-index: var(--z-index-on);
       @include responsive(md) {
         grid-area: imgwrapper;
-        margin-top: 7px;
+        margin-top: rem(7px);
       }
       @include responsive(sm) {
-        width: 308px;
+        width: rem(308px);
         margin-inline: auto;
-        margin-bottom: 40px;
+        margin-bottom: rem(40px);
       }
     }
   }

@@ -4,29 +4,29 @@
 cta
 ======================================================= */
 .c-cta {
-  padding: 72px 0 47px;
+  padding: rem(72px) 0 rem(47px);
   background: linear-gradient(135deg, #de133f 0%, #ff9b2f 100%);
   @include responsive(sm) {
-    padding: 56px 0;
+    padding: rem(56px) 0;
   }
   .l-inner {
     position: relative;
     &::before {
       position: absolute;
-      top: -80px;
-      left: -160px;
-      width: 990px;
-      height: 382px;
+      top: rem(-80px);
+      left: rem(-160px);
+      width: rem(990px);
+      height: rem(382px);
       content: "";
       background-image: url("#{$images-pass-root}/common/cta-bg.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
       @include responsive(sm) {
-        top: 60px;
+        top: rem(60px);
         left: 50%;
-        width: 375px;
-        height: 280px;
+        width: rem(375px);
+        height: rem(280px);
         background-image: url("#{$images-pass-root}/common/cta-bg-sm.svg");
         translate: -50%;
       }
@@ -43,7 +43,7 @@ cta
         "imgwrapper btn";
       grid-template-rows: auto auto 1fr;
       grid-template-columns: 1fr auto;
-      column-gap: 112px;
+      column-gap: rem(112px);
       padding-right: calc(#{46 / 16} * 1em);
     }
     @include responsive(sm) {
@@ -59,10 +59,13 @@ cta
         z-index: var(--z-index-on);
         grid-area: imgwrapper;
         justify-self: end;
+        @include responsive(md) {
+          max-width: 451px;
+        }
         @include responsive(sm) {
           justify-self: center;
-          width: 334px;
-          margin-bottom: 24px;
+          width: rem(334px);
+          margin-bottom: rem(24px);
         }
       }
     }
@@ -77,8 +80,8 @@ cta
       line-height: calc(#{57 / 36});
       color: var(--color-brightest);
       @include responsive(sm) {
-        margin-bottom: 24px;
-        font-size: 28px;
+        margin-bottom: rem(24px);
+        font-size: rem(28px);
         line-height: calc(#{44 / 28});
         text-align: center;
       }
@@ -90,8 +93,8 @@ cta
       margin-bottom: calc(#{32 / 16} * 1em);
       color: var(--color-brightest);
       @include responsive(sm) {
-        margin-bottom: 24px;
-        font-size: 14px;
+        margin-bottom: rem(24px);
+        font-size: rem(14px);
         text-align: center;
       }
     }
@@ -101,15 +104,15 @@ cta
       grid-area: btn;
       align-self: start;
       width: fit-content;
-      min-width: 256px;
+      min-width: rem(256px);
       padding-block: calc(var(--_padding-block) - var(--font-base-offset-top)) calc(var(--_padding-block) + var(--font-base-offset-top));
       padding-inline: 4em;
       font-weight: 700;
       color: var(--color-brightest);
       text-align: center;
       background-color: #111827;
-      border: 1px solid #111827;
-      border-radius: calc(infinity * 1px);
+      border: rem(1px) solid #111827;
+      border-radius: calc(infinity * rem(1px));
 
       --_padding-block: 1em;
       @include responsive(sm) {

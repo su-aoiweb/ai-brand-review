@@ -55,13 +55,13 @@ footer
     &-img {
       &wrapper {
         &.--iso {
-          width: 37px;
+          width: rem(37px);
         }
         &.--isms {
-          width: 35px;
+          width: rem(35px);
         }
         &.--privacy {
-          width: 40px;
+          width: rem(40px);
         }
       }
 

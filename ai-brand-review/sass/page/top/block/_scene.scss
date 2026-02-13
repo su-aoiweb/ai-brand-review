@@ -15,11 +15,11 @@ scene
 
     overflow: hidden;
     background-color: var(--color-brightest);
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+    border-radius: rem(8px);
+    box-shadow: 0 rem(2px) rem(10px) rgb(0 0 0 / 8%);
     &-img {
       max-width: none;
-      height: 230px;
+      aspect-ratio: 552 / 230;
     }
     &-body {
       padding: calc(#{24 / 16} * 1em);
@@ -29,7 +29,7 @@ scene
       gap: calc(#{16 / 22} * 1em);
       justify-content: center;
       margin-bottom: calc(#{16 / 22} * 1em);
-      font-size: 22px;
+      font-size: rem(22px);
       font-weight: 700;
       line-height: calc(#{35 / 22});
       text-align: center;
@@ -39,7 +39,7 @@ scene
         height: calc(#{4 / 22} * 1em);
         content: "";
         background: linear-gradient(90deg, #de133f 0%, #ff9b2f 100%);
-        border-radius: calc(infinity * 1px);
+        border-radius: calc(infinity * rem(1px));
       }
     }
     &-txt {

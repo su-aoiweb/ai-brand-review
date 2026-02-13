@@ -15,7 +15,7 @@ solution
 
     padding: 1.5em 1em;
     background-color: var(--color-brightest);
-    border-radius: 8px;
+    border-radius: rem(8px);
     &-img {
       &wrapper {
         justify-content: center;
@@ -27,7 +27,7 @@ solution
       gap: 0.5em;
       text-align: center;
       &-txt {
-        font-size: 14px;
+        font-size: rem(14px);
         line-height: calc(#{22 / 14});
       }
       &-ttl {
