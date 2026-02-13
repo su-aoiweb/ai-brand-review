@@ -4,18 +4,18 @@
 cta
 ======================================================= */
 .c-cta {
-  padding-block: 5em;
+  padding: 72px 0 47px;
   background: linear-gradient(135deg, #de133f 0%, #ff9b2f 100%);
   .l-inner {
     position: relative;
     &::before {
       position: absolute;
       top: -80px;
-      left: -140px;
-      width: 860px;
+      left: -160px;
+      width: 990px;
       height: 382px;
       content: "";
-      background-image: url("#{$images-pass-root}/common/cta-bg.svg");
+      background-image: url("#{$images-pass-root}/common/cta-bg.png");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;

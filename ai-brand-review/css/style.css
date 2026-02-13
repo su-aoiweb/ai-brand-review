@@ -404,10 +404,6 @@ footer
     margin-bottom: 2rem;
   }
 }
-.p-footer__icon-img {
-  display: block;
-  align-self: start;
-}
 .p-footer__icon-imgwrapper.--iso {
   width: 37px;
 }
@@ -416,6 +412,10 @@ footer
 }
 .p-footer__icon-imgwrapper.--privacy {
   width: 40px;
+}
+.p-footer__icon-img {
+  display: block;
+  align-self: start;
 }
 .p-footer__def.--service {
   grid-area: service;
@@ -438,10 +438,6 @@ footer
     line-height: calc(29/18);
   }
 }
-.p-footer__nav {
-  position: relative;
-  opacity: 0.8;
-}
 .p-footer__nav-list {
   display: grid;
   gap: 0.75rem;
@@ -453,6 +449,10 @@ footer
 }
 .p-footer__nav-item {
   display: flex;
+}
+.p-footer__nav {
+  position: relative;
+  opacity: 0.8;
 }
 .p-footer__nav::after {
   position: absolute;
@@ -522,14 +522,6 @@ header
   display: flex;
   width: 17.625rem;
 }
-.p-header__gnav {
-  position: relative;
-  font-weight: 700;
-  transition-timing-function: ease;
-  transition-duration: var(--transition-duration);
-  transition-property: color;
-  will-change: color;
-}
 .p-header__gnav-list {
   display: flex;
   gap: 2rem;
@@ -548,6 +540,14 @@ header
   .p-header__gnav-item {
     justify-self: center;
   }
+}
+.p-header__gnav {
+  position: relative;
+  font-weight: 700;
+  transition-timing-function: ease;
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+  will-change: color;
 }
 .p-header__gnav::after {
   position: absolute;
@@ -593,8 +593,6 @@ header
   cursor: pointer;
   background: linear-gradient(90deg, var(--color-main), var(--color-accent));
   border-radius: calc(infinity * 1px);
-  transition-property: translate box-shadow;
-  will-change: translate box-shadow;
 }
 @media (width <= 767px) {
   .p-header__gnav-btn {
@@ -603,6 +601,10 @@ header
     margin-inline: auto;
     text-align: center;
   }
+}
+.p-header__gnav-btn {
+  transition-property: translate box-shadow;
+  will-change: translate box-shadow;
 }
 .p-header__gnav-btn:focus-visible {
   box-shadow: 0 0.625rem 1.5625rem rgba(222, 19, 63, 0.3);
@@ -692,9 +694,6 @@ header
 .p-header__dialog .p-header__burger {
   position: relative;
 }
-.p-header__dialog .p-header__burger-bar {
-  display: none;
-}
 .p-header__dialog .p-header__burger-bar-wrapper::before, .p-header__dialog .p-header__burger-bar-wrapper::after {
   position: absolute;
   top: 50%;
@@ -705,6 +704,9 @@ header
 }
 .p-header__dialog .p-header__burger-bar-wrapper::after {
   rotate: 45deg;
+}
+.p-header__dialog .p-header__burger-bar {
+  display: none;
 }
 
 /* =======================================================
@@ -815,7 +817,7 @@ btn
 cta
 ======================================================= */
 .c-cta {
-  padding-block: 5em;
+  padding: 72px 0 47px;
   background: linear-gradient(135deg, #de133f 0%, #ff9b2f 100%);
 }
 .c-cta .l-inner {
@@ -824,11 +826,11 @@ cta
 .c-cta .l-inner::before {
   position: absolute;
   top: -80px;
-  left: -140px;
-  width: 860px;
+  left: -160px;
+  width: 990px;
   height: 382px;
   content: "";
-  background-image: url("../images/common/cta-bg.svg");
+  background-image: url("../images/common/cta-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -845,12 +847,17 @@ cta
     padding-right: calc(46/16 * 1em);
   }
 }
+@media (width >= 768px) {
+  .c-cta__box-imgwrapper {
+    grid-area: imgwrapper;
+  }
+}
 .c-cta__box-imgwrapper {
   justify-self: end;
 }
 @media (width >= 768px) {
-  .c-cta__box-imgwrapper {
-    grid-area: imgwrapper;
+  .c-cta__box-ttl {
+    grid-area: ttl;
   }
 }
 .c-cta__box-ttl {
@@ -862,8 +869,8 @@ cta
   color: var(--color-brightest);
 }
 @media (width >= 768px) {
-  .c-cta__box-ttl {
-    grid-area: ttl;
+  .c-cta__box-txt {
+    grid-area: txt;
   }
 }
 .c-cta__box-txt {
@@ -871,8 +878,8 @@ cta
   color: var(--color-brightest);
 }
 @media (width >= 768px) {
-  .c-cta__box-txt {
-    grid-area: txt;
+  .c-cta__box-btn {
+    grid-area: btn;
   }
 }
 .c-cta__box-btn {
@@ -888,11 +895,6 @@ cta
   border: 1px solid #111827;
   border-radius: calc(infinity * 1px);
   --_padding-block: 1em;
-}
-@media (width >= 768px) {
-  .c-cta__box-btn {
-    grid-area: btn;
-  }
 }
 .c-cta__box-btn:focus-visible {
   color: #111827;
@@ -1060,12 +1062,12 @@ form
   align-items: center;
   justify-content: center;
 }
-.c-form__btn {
-  position: relative;
-}
 .c-form__btn-wrapper {
   margin: 0 auto;
   text-align: center;
+}
+.c-form__btn {
+  position: relative;
 }
 .c-form__btn::after {
   position: absolute;

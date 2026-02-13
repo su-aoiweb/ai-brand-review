@@ -4,14 +4,11 @@
 mv
 ======================================================= */
 .p-mv {
+  position: relative;
   padding: 184px 0 127px;
   background: linear-gradient(145deg, #ffe7f0 0%, #ffecd7 100%);
-
-  // background-image: url("#{$images-pass-root}/top/mv-bg.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
   .l-inner {
+    position: relative;
     display: grid;
     @include responsive(md) {
       grid-template:
@@ -22,8 +19,22 @@ mv
       grid-template-columns: 1fr 560px;
       align-items: center;
     }
+    &::after {
+      position: absolute;
+      top: -184px;
+      right: -160px;
+      width: 1144px;
+      height: 680px;
+      content: "";
+      background-image: url("#{$images-pass-root}/top/mv-bg.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
   }
   &__ttl {
+    position: relative;
+    z-index: var(--z-index-on);
     width: 532px;
     margin-bottom: 40px;
     @include responsive(md) {
@@ -31,12 +42,16 @@ mv
     }
   }
   &__txt {
+    position: relative;
+    z-index: var(--z-index-on);
     margin-bottom: 32px;
     @include responsive(md) {
       grid-area: txt;
     }
   }
   &__logo {
+    position: relative;
+    z-index: var(--z-index-on);
     width: 430px;
     margin-bottom: 56px;
     @include responsive(md) {
@@ -46,6 +61,8 @@ mv
   &__btn {
     --_padding-block: 1em;
 
+    position: relative;
+    z-index: var(--z-index-on);
     display: grid;
     width: fit-content;
     padding-block: calc(var(--_padding-block) - var(--font-base-offset-top)) calc(var(--_padding-block) + var(--font-base-offset-top));
@@ -73,8 +90,11 @@ mv
   }
   &__img {
     &wrapper {
+      position: relative;
+      z-index: var(--z-index-on);
       @include responsive(md) {
         grid-area: imgwrapper;
+        margin-top: 7px;
       }
     }
   }
