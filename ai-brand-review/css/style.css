@@ -347,7 +347,7 @@ picture {
 @media (width <= 767px) {
   :root {
     --viewport-width: 375px;
-    --inner-padding-inline: 20px;
+    --inner-padding-inline: 12px;
   }
 }
 
@@ -621,7 +621,7 @@ header
   place-content: center;
   width: 2.5rem;
   aspect-ratio: 1;
-  background: linear-gradient(90deg, #3c145f 0%, #64a0dc 100%);
+  background-color: var(--color-main);
   border-radius: calc(infinity * 1rem);
 }
 .p-header__burger-bar-wrapper {
@@ -632,12 +632,12 @@ header
   width: 1.5rem;
   height: 0.125rem;
   content: "";
-  background-color: var(--white);
+  background-color: var(--color-brightest);
 }
 .p-header__burger-bar-wrapper .p-header__burger-bar {
   width: 1.5rem;
   height: 0.125rem;
-  background-color: var(--white);
+  background-color: var(--color-brightest);
 }
 .p-header__dialog {
   opacity: 0;
@@ -667,7 +667,7 @@ header
   }
 }
 .p-header__dialog[open]::backdrop {
-  background-color: var(--white);
+  background-color: var(--color-brightest);
   opacity: 1;
 }
 @starting-style {

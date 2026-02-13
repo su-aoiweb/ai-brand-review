@@ -27,6 +27,6 @@
   }
   @include responsive(sm) {
     --viewport-width: 375px; // smのデザインカンプ幅
-    --inner-padding-inline: 20px;
+    --inner-padding-inline: 12px;
   }
 }

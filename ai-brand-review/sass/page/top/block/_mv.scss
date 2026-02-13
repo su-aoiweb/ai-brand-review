@@ -7,22 +7,33 @@ mv
   position: relative;
   padding: 184px 0 127px;
   background: linear-gradient(145deg, #ffe7f0 0%, #ffecd7 100%);
+  @include responsive(sm) {
+    padding: 107px 0 40px;
+    background: linear-gradient(315deg, rgb(255 231 240 / 80%) 0%, rgb(255 236 215 / 80%) 100%);
+  }
   .l-inner {
     position: relative;
     display: grid;
+    grid-template:
+      "ttl imgwrapper"
+      "txt imgwrapper"
+      "logo imgwrapper"
+      "btn imgwrapper";
+    align-items: center;
     @include responsive(md) {
-      grid-template:
-        "ttl imgwrapper"
-        "txt imgwrapper"
-        "logo imgwrapper"
-        "btn imgwrapper";
       grid-template-columns: 1fr 560px;
-      align-items: center;
+    }
+    @include responsive(sm) {
+      grid-template:
+        "ttl"
+        "txt"
+        "logo"
+        "imgwrapper"
+        "btn";
+      padding-inline: 21.5px;
     }
     &::after {
       position: absolute;
-      top: -184px;
-      right: -160px;
       width: 1144px;
       height: 680px;
       content: "";
@@ -30,33 +41,47 @@ mv
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
+      @include responsive(md) {
+        top: -184px;
+        right: -160px;
+      }
+      @include responsive(sm) {
+        bottom: -40px;
+        left: 50%;
+        width: 375px;
+        height: 510px;
+        background-image: url("#{$images-pass-root}/top/mv-bg-sm.svg");
+        translate: -50%;
+      }
     }
   }
   &__ttl {
     position: relative;
     z-index: var(--z-index-on);
+    grid-area: ttl;
     width: 532px;
     margin-bottom: 40px;
-    @include responsive(md) {
-      grid-area: ttl;
+    @include responsive(sm) {
+      width: 332px;
     }
   }
   &__txt {
     position: relative;
     z-index: var(--z-index-on);
+    grid-area: txt;
     margin-bottom: 32px;
-    @include responsive(md) {
-      grid-area: txt;
+    @include responsive(sm) {
+      margin-bottom: 40px;
+      font-size: 14px;
+      letter-spacing: 0.03em;
     }
   }
   &__logo {
     position: relative;
     z-index: var(--z-index-on);
+    grid-area: logo;
     width: 430px;
     margin-bottom: 56px;
-    @include responsive(md) {
-      grid-area: logo;
-    }
   }
   &__btn {
     --_padding-block: 1em;
@@ -64,6 +89,7 @@ mv
     position: relative;
     z-index: var(--z-index-on);
     display: grid;
+    grid-area: btn;
     width: fit-content;
     padding-block: calc(var(--_padding-block) - var(--font-base-offset-top)) calc(var(--_padding-block) + var(--font-base-offset-top));
     padding-inline: 4em;
@@ -71,12 +97,13 @@ mv
     color: var(--color-brightest);
     background: linear-gradient(90deg, var(--color-main), var(--color-accent));
     border-radius: calc(infinity * 1px);
-    @include responsive(md) {
-      grid-area: btn;
-    }
-
     transition-property: translate box-shadow;
     will-change: translate box-shadow;
+    @include responsive(sm) {
+      --_padding-block: calc(#{14 / 16} * 1em);
+
+      margin-inline: auto;
+    }
     &:focus-visible {
       box-shadow: 0 rem(10px) rem(25px) rgb(222 19 63 / 30%);
       translate: 0 -0.1rem;
@@ -95,6 +122,11 @@ mv
       @include responsive(md) {
         grid-area: imgwrapper;
         margin-top: 7px;
+      }
+      @include responsive(sm) {
+        width: 308px;
+        margin-inline: auto;
+        margin-bottom: 40px;
       }
     }
   }

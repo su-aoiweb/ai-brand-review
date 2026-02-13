@@ -125,7 +125,7 @@ header
     place-content: center;
     width: rem(40px);
     aspect-ratio: 1;
-    background: linear-gradient(90deg, #3c145f 0%, #64a0dc 100%);
+    background-color: var(--color-main);
     border-radius: calc(infinity * rem(1px));
     &-bar {
       &-wrapper {
@@ -136,12 +136,12 @@ header
           width: rem(24px);
           height: rem(2px);
           content: "";
-          background-color: var(--white);
+          background-color: var(--color-brightest);
         }
         .p-header__burger-bar {
           width: rem(24px);
           height: rem(2px);
-          background-color: var(--white);
+          background-color: var(--color-brightest);
         }
       }
     }
@@ -170,7 +170,7 @@ header
         scale: 0.9;
       }
       &::backdrop {
-        background-color: var(--white);
+        background-color: var(--color-brightest);
         opacity: 1;
         @starting-style {
           opacity: 0;

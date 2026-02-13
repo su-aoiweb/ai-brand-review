@@ -29,7 +29,11 @@
         <div class="l-inner p-header">
           <h1 class="p-header__logo">
             <a href="./" class="p-header__logo-link">
-              <img src="./images/common/logo.svg" alt="AI Brand Review" width="282" height="24" />
+              <picture class="p-header__logo-imgwrapper">
+                <source media="(max-width: 767px)" srcset="./images/common/logo-sm.svg" width="232" height="20" />
+                <source media="(min-width: 768px)" srcset="./images/common/logo.svg" width="282" height="24" />
+                <img src="./images/common/logo.svg" alt="AI Brand Review" width="282" height="24" />
+              </picture>
             </a>
           </h1>
 
@@ -52,7 +56,7 @@
             <div class="p-header__dialog-inner">
               <div class="p-header__dialog-head">
                 <a href="./" class="p-header__logo-link">
-                  <img src="./images/common/logo.svg" alt="LOGO LABO" width="188" height="18" />
+                  <img src="./images/common/logo-sm.svg" alt="AI Brand Review" width="232" height="20" />
                 </a>
                 <button type="button" aria-label="メニューを閉じる" commandfor="header-dialog" command="close" class="p-header__burger">
                   <span class="p-header__burger-bar-wrapper">
@@ -64,10 +68,12 @@
               <div class="p-header__dialog-body">
                 <nav class="p-header__gnav-wrapper u-sm">
                   <ul class="p-header__gnav-list">
-                    <li class="p-header__gnav-item"><a href="" class="p-header__gnav"></a></li>
+                    <li class="p-header__gnav-item"><a href="" class="p-header__gnav">こんなお悩みを解決</a></li>
+                    <li class="p-header__gnav-item"><a href="" class="p-header__gnav">選ばれる理由</a></li>
+                    <li class="p-header__gnav-item"><a href="" class="p-header__gnav">活用シーン</a></li>
+                    <li class="p-header__gnav-item"><a href="https://share-na2.hsforms.com/1TKHVzP_EQlqV9L0eNdLxDQ4xxlb" target="_blank" class="p-header__gnav-btn">資料請求・トライアル</a></li>
                   </ul>
                 </nav>
-                <a href="https://share-na2.hsforms.com/1TKHVzP_EQlqV9L0eNdLxDQ4xxlb" target="_blank" class="p-header__gnav-btn c-btn">資料請求はこちら</a>
               </div>
               <!-- /.p-header__dialog-body -->
             </div>
@@ -80,14 +86,20 @@
         <section class="p-mv">
           <div class="l-inner">
             <h2 class="p-mv__ttl">
-              <img src="./images/top/mv-ttl.svg" alt="AIでレビュー業務を劇的に効率化しませんか？" width="532" height="98" />
+              <picture class="p-mv__ttl-logo-imgwrapper">
+                <source media="(max-width: 767px)" srcset="./images/top/mv-ttl-sm.svg" width="332" height="64" />
+                <source media="(min-width: 768px)" srcset="./images/top/mv-ttl.svg" width="532" height="98" />
+                <img src="./images/top/mv-ttl.svg" alt="AIでレビュー業務を劇的に効率化しませんか？" width="532" height="98" />
+              </picture>
             </h2>
-            <p class="p-mv__txt">広報マテリアル・制作物・記事・各種ビジュアルのレビューを<br />あっという間に完了するAIサービス</p>
-            <p class="p-mv__logo"><img src="./images/top/mv-logo.svg" alt="AI Brand Revies" width="430" height="36" /></p>
+            <p class="p-mv__txt">広報マテリアル・制作物・記事・各種ビジュアルの<br class="u-sm" />レビューを<br class="u-md" />あっという間に完了するAIサービス</p>
+            <p class="p-mv__logo u-md"><img src="./images/top/mv-logo.svg" alt="AI Brand Revies" width="430" height="36" /></p>
             <a href="" target="_blank" class="p-mv__btn">資料請求はこちら</a>
-            <figure class="p-mv__imgwrapper">
+            <picture class="p-mv__imgwrapper">
+              <source media="(max-width: 767px)" srcset="./images/top/mv-img01-sm.png" width="308" height="178" />
+              <source media="(min-width: 768px)" srcset="./images/top/mv-img01.png" width="560" height="312" />
               <img class="p-mv__img" src="./images/top/mv-img01.png" alt="" width="560" height="312" />
-            </figure>
+            </picture>
           </div>
           <!-- /.l-inner -->
         </section>
