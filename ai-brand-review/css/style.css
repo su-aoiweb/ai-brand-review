@@ -516,7 +516,14 @@ header
 }
 .p-header__logo-link {
   display: flex;
+}
+.p-header__logo-imgwrapper {
   width: 17.625rem;
+}
+@media (width <= 767px) {
+  .p-header__logo-imgwrapper {
+    width: 14.5rem;
+  }
 }
 .p-header__gnav-list {
   display: flex;

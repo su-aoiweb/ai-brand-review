@@ -30,7 +30,14 @@ header
   &__logo {
     &-link {
       display: flex;
-      width: rem(282px);
+    }
+    &-img {
+      &wrapper {
+        width: rem(282px);
+        @include responsive(sm) {
+          width: rem(232px);
+        }
+      }
     }
   }
   &__gnav {
