@@ -733,46 +733,6 @@ u-bullet
 }
 
 /* =======================================================
-colon
-======================================================= */
-.u-colon__def {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-.u-colon__dttl {
-  display: flex;
-}
-.u-colon__dttl::after {
-  content: "：";
-}
-
-/* =======================================================
-u-dot
-======================================================= */
-.u-dot__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.u-dot__item {
-  display: flex;
-}
-.u-dot__item:not(:last-of-type)::after {
-  content: "・";
-}
-
-/* =======================================================
-note
-======================================================= */
-.u-note {
-  padding-left: 1em;
-  font-size: 0.75em;
-  text-indent: -1em;
-}
-.u-note::before {
-  content: "※";
-}
-
-/* =======================================================
 u-only
 ======================================================= */
 @media (width <= 767px) {
@@ -785,29 +745,6 @@ u-only
   .u-sm {
     display: none;
   }
-}
-
-/* =======================================================
-u-slash
-======================================================= */
-.u-slash__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 0.25em;
-}
-.u-slash__item {
-  display: flex;
-  gap: 0 0.25em;
-}
-.u-slash__item:not(:last-of-type)::after {
-  content: "/";
-}
-
-/* =======================================================
-uppercase
-======================================================= */
-.u-uppercase {
-  text-transform: uppercase;
 }
 
 /* =======================================================
@@ -956,6 +893,42 @@ lead
 .c-lead {
   margin-bottom: calc(40/16 * 1em);
   text-align: center;
+}
+
+/* =======================================================
+c-lower-mv
+======================================================= */
+.c-lower__mv {
+  padding: 8rem 1rem 6rem;
+  color: var(--color-brightest);
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-main), var(--color-accent));
+}
+@media (width <= 767px) {
+  .c-lower__mv {
+    padding: 6rem 1rem 4rem;
+  }
+}
+.c-lower__mv-hgroup {
+  gap: 1rem;
+}
+.c-lower__mv-ttl {
+  font-size: 3rem;
+  font-weight: 900;
+}
+@media (width <= 767px) {
+  .c-lower__mv-ttl {
+    font-size: 2rem;
+  }
+}
+.c-lower__mv-txt {
+  font-size: 1.25rem;
+  opacity: 0.95;
+}
+@media (width <= 767px) {
+  .c-lower__mv-txt {
+    font-size: 1rem;
+  }
 }
 
 /* =======================================================

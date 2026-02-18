@@ -1,0 +1,53 @@
+/* =======================================================
+terms
+======================================================= */
+.p-terms {
+  padding-block: calc(80/16 * 1em);
+}
+@media (width <= 767px) {
+  .p-terms {
+    padding-block: calc(56/16 * 1em);
+  }
+}
+.p-terms .l-inner {
+  max-width: 62.5rem;
+}
+.p-terms__dttl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.p-terms__ditem {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 0.125rem solid #e5e7eb;
+}
+.p-terms__ditem .u-num__list,
+.p-terms__ditem .u-alphabet__list,
+.p-terms__ditem .u-roman-num__list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 1rem;
+}
+.p-terms__ditem .u-num__item,
+.p-terms__ditem .u-alphabet__item,
+.p-terms__ditem .u-roman-num__item {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
+}
+.p-terms__ditem .u-num__item-deco,
+.p-terms__ditem .u-alphabet__item-deco,
+.p-terms__ditem .u-roman-num__item-deco {
+  justify-self: end;
+}
+.p-terms__ditem .u-num__item .u-bullet__list,
+.p-terms__ditem .u-alphabet__item .u-bullet__list,
+.p-terms__ditem .u-roman-num__item .u-bullet__list {
+  margin-top: 0.5rem;
+}
