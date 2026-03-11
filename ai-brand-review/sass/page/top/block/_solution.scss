@@ -1,0 +1,40 @@
+@use "../../../foundation/import" as *;
+
+/* =======================================================
+solution
+======================================================= */
+.p-solution {
+  &__conts {
+    &-wrapper {
+      display: grid;
+      gap: 1em;
+      @include responsive(md) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    padding: 1.5em 1em;
+    background-color: var(--color-brightest);
+    border-radius: rem(8px);
+    &-img {
+      &wrapper {
+        justify-content: center;
+        margin-bottom: 1em;
+      }
+    }
+    &-hgroup {
+      display: grid;
+      gap: 0.5em;
+      text-align: center;
+      &-txt {
+        font-size: rem(14px);
+        line-height: calc(#{22 / 14});
+      }
+      &-ttl {
+        font-size: calc(#{18 / 16} * 1em);
+        font-weight: 700;
+        line-height: calc(#{28 / 18});
+      }
+    }
+  }
+}

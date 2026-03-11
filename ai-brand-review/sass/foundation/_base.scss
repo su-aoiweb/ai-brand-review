@@ -1,6 +1,9 @@
 @use "./import" as *;
 html {
-  font-size: $rem-root-size;
+  font-size: min(vw($rem-root-size), $rem-root-size);
+  @include responsive(sm) {
+    font-size: vw($rem-root-size, sm);
+  }
 }
 body {
   font-family: var(--font-family-base);
@@ -9,15 +12,6 @@ body {
   line-height: var(--line-height-base);
   color: var(--color-base);
   letter-spacing: var(--letter-spacing-base);
-  /* stylelint-disable length-zero-no-unit */
-  zoom: progress(100lvw, 0px, var(--viewport-width));
-  background-color: var(--color-brightest);
-  -webkit-text-size-adjust: initial;
-  @include responsive(sm) {
-    font-size: rem(calc(var(--font-size-base) * var(--breakpoint-sm) / var(--viewport-width)));
-    zoom: progress(100lvw, 0px, var(--breakpoint-sm));
-  }
-  /* stylelint-enable length-zero-no-unit */
 }
 input,
 button,

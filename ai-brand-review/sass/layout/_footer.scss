@@ -4,6 +4,136 @@
 footer
 ======================================================= */
 .l-footer {
+  padding: 4rem 0 1rem;
+  color: var(--color-brightest);
+  background-color: #111827;
 }
 .p-footer {
+  &__box {
+    display: grid;
+    grid-template:
+      "logo service company"
+      "icon-wrapper service company";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: rem(560px) repeat(2, 1fr);
+    padding-bottom: rem(64px);
+    margin-bottom: rem(12px);
+    border-bottom: rem(1px) solid rgb(255 255 255 / 10%);
+    @include responsive(md) {
+      row-gap: rem(32px);
+    }
+    @include responsive(sm) {
+      grid-template:
+        "logo"
+        "icon-wrapper"
+        "service"
+        "company";
+      padding-bottom: rem(40px);
+    }
+  }
+  &__logo {
+    display: flex;
+    grid-area: logo;
+    width: rem(353px);
+    @include responsive(sm) {
+      margin-bottom: rem(32px);
+    }
+  }
+  &__icon {
+    &-wrapper {
+      display: flex;
+      grid-area: icon-wrapper;
+      gap: rem(24px);
+      place-self: start start;
+      align-items: center;
+      padding: rem(8px) rem(12px);
+      background-color: var(--color-brightest);
+      @include responsive(sm) {
+        margin-bottom: rem(24px);
+      }
+    }
+    &-img {
+      &wrapper {
+        &.--iso {
+          width: rem(37px);
+        }
+        &.--isms {
+          width: rem(35px);
+        }
+        &.--privacy {
+          width: rem(40px);
+        }
+      }
+
+      display: block;
+      align-self: start;
+    }
+  }
+  &__def {
+    &.--service {
+      grid-area: service;
+    }
+    &.--company {
+      grid-area: company;
+    }
+    &:not(:first-of-type) {
+      @include responsive(sm) {
+        margin-top: rem(24px);
+      }
+    }
+  }
+  &__dttl {
+    margin-bottom: 1rem;
+    font-size: rem(18px);
+    @include responsive(sm) {
+      line-height: calc(#{29 / 18});
+    }
+  }
+  &__nav {
+    &-list {
+      display: grid;
+      gap: 0.75rem;
+      @include responsive(sm) {
+        gap: rem(12px);
+      }
+    }
+    &-item {
+      display: flex;
+    }
+
+    position: relative;
+    opacity: 0.8;
+    &::after {
+      position: absolute;
+      bottom: -0.25rem;
+      left: 50%;
+      width: 0;
+      height: rem(1px);
+      content: "";
+      background-color: var(--color-brightest);
+      translate: -50%;
+      transition-timing-function: ease;
+      transition-duration: var(--transition-duration);
+      transition-property: width;
+      will-change: width;
+    }
+    &:focus-visible {
+      &::after {
+        width: 100%;
+      }
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__copyright {
+    display: block;
+    font-size: rem(12px);
+    text-align: center;
+    opacity: 0.8;
+  }
 }
