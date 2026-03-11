@@ -1,0 +1,31 @@
+@use "../foundation/import" as *;
+
+/* =======================================================
+c-lower-mv
+======================================================= */
+.c-lower__mv {
+  padding: 8rem 1rem 6rem;
+  color: var(--color-brightest);
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-main), var(--color-accent));
+  @include responsive(sm) {
+    padding: 6rem 1rem 4rem;
+  }
+  &-hgroup {
+    gap: 1rem;
+  }
+  &-ttl {
+    font-size: 3rem;
+    font-weight: 900;
+    @include responsive(sm) {
+      font-size: 2rem;
+    }
+  }
+  &-txt {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    @include responsive(sm) {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@use "../../../foundation/import" as *;
+
+/* =======================================================
+reason
+======================================================= */
+.p-reason {
+  &__list {
+    display: grid;
+    gap: calc(#{40 / 16} * 1em);
+  }
+  &__item {
+    display: grid;
+    overflow: hidden;
+    border-radius: rem(12px);
+    @include responsive(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &:nth-of-type(odd) {
+      --item-color: var(--color-main);
+    }
+    &:nth-of-type(even) {
+      --item-color: var(--color-accent);
+    }
+    &-head {
+      display: grid;
+      align-items: center;
+      padding: calc(#{24 / 16} * 1em) calc(#{40 / 16} * 1em);
+      background-color: var(--color-contrast);
+      @include responsive(md) {
+        border-left: rem(6px) solid var(--item-color);
+      }
+      @include responsive(sm) {
+        padding: calc(#{40 / 16} * 1em) 1em;
+        border-top: rem(6px) solid var(--item-color);
+      }
+      &-inner {
+        display: grid;
+        gap: calc(#{24 / 16} * 1em);
+        @include responsive(sm) {
+          gap: 1em;
+        }
+      }
+    }
+    &-hgroup {
+      &-txt {
+        margin-bottom: 0.5em;
+        font-family: var(--font-family-sub);
+        font-weight: 700;
+        line-height: 1;
+        color: var(--item-color);
+      }
+      &-ttl {
+        font-size: 1.5em;
+        font-weight: 700;
+        line-height: calc(#{38 / 24});
+      }
+    }
+    &-txt {
+      font-size: calc(#{14 / 16} * 1em);
+    }
+    &-img {
+      &wrapper {
+        display: grid;
+        place-content: center;
+        padding-block: 1.5em;
+        background-color: var(--item-color);
+      }
+
+      width: rem(362px);
+      overflow: hidden;
+      border-radius: rem(8px);
+      box-shadow: 0 rem(2px) rem(10px) rgb(0 0 0 / 8%);
+      @include responsive(sm) {
+        width: rem(283px);
+      }
+    }
+  }
+}
